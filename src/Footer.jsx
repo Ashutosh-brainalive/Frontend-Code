@@ -52,7 +52,7 @@ export default function Footer() {
       </div>
 
       <div className="border-t border-gray-700 mt-10 pt-8  text-lg font-light">
-        © All Rights Reserved 2025 | BrainAlive Research Pvt. Ltd.
+        © All Rights Reserved 2025 | BrainAlive Research Private Ltd.
       </div>
     </footer>
   );
