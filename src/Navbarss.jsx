@@ -7,22 +7,6 @@ const Navbarss = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const scrollToFAQ = (e) => {
-    e.preventDefault();
-    const faqSection = document.getElementById('faq');
-    if (faqSection) {
-      const navbarHeight = 90;
-      const scrollPadding = 48; 
-      const elementPosition = faqSection.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - scrollPadding;
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth'
-      });
-      setIsMenuOpen(false);
-    }
-  };
 
   return (
     <header className="max-w-screen-xl px-4 mx-auto sticky top-0 left-0 w-full bg-black shadow-md z-[100]">
@@ -33,7 +17,7 @@ const Navbarss = () => {
             <img
               src="/media/mainLogo.svg"
               alt="BrainAlive Logo"
-              className="h-6 sm:h-8 md:h-10 w-[106px] h-[55px]"
+              className="sm:h-8 md:h-10 w-[106px] h-[55px]"
             />
           </a>
         </div>
@@ -42,30 +26,25 @@ const Navbarss = () => {
         <nav className="hidden md:flex flex-1 justify-center items-center gap-6 lg:gap-10 w-[277px] h-[24px]">
           <a
             href="/"
-            className="font-poppins text-base text-[#25B021] transition-colors"
-            style={{ fontWeight: '400' }}
+            className="font-poppins text-base font-normal text-[#25B021] "
           >
             Home
           </a>
           <a
             href="/about"
-            className="font-poppins text-base text-white hover:text-custom-green transition-colors"
-            style={{ fontWeight: '400' }}
+            className="font-poppins text-base font-normal text-white "
           >
             About
           </a>
           <a
             href="/docs"
-            className="font-poppins text-base text-white hover:text-custom-green transition-colors"
-            style={{ fontWeight: '400' }}
+            className="font-poppins text-base font-normal text-white "
           >
             Docs
           </a>
           <a
             href="#faq"
-            onClick={scrollToFAQ}
-            className="font-poppins text-base text-white hover:text-custom-green transition-colors"
-            style={{ fontWeight: '400' }}
+            className="font-poppins text-base font-normal text-white transition-colors"
           >
             FAQ's
           </a>
@@ -132,8 +111,7 @@ const Navbarss = () => {
             </a>
             <a
               href="#faq"
-              onClick={scrollToFAQ}
-              className="font-poppins text-base text-white hover:text-custom-green transition-colors w-full text-center py-2"
+       font-normal        className="font-poppins text-base text-white hover:text-custom-green transition-colors w-full text-center py-2"
               style={{ fontWeight: '400' }}
             >
               FAQ's

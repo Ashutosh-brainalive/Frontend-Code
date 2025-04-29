@@ -41,8 +41,6 @@ const settings = {
 };
 
 const TeamSection = () => {
-
-
   return (
     <section className="w-full bg-black text-white py-12 overflow-hidden">
       <h2
