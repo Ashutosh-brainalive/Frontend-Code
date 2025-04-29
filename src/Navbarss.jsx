@@ -90,29 +90,25 @@ const Navbarss = () => {
           <nav className="flex flex-col items-center gap-4">
             <a
               href="/"
-              className="font-poppins text-base text-custom-green w-full text-center py-2"
-              style={{ fontWeight: '400' }}
+              className="font-poppins text-base font-normal text-custom-green w-full text-center py-2"
             >
               Home
             </a>
             <a
               href="/about"
-              className="font-poppins text-base text-white hover:text-custom-green transition-colors w-full text-center py-2"
-              style={{ fontWeight: '400' }}
+              className="font-poppins text-base font-normal text-white hover:text-custom-green transition-colors w-full text-center py-2"
             >
               About
             </a>
             <a
               href="/docs"
-              className="font-poppins text-base text-white hover:text-custom-green transition-colors w-full text-center py-2"
-              style={{ fontWeight: '400' }}
+              className="font-poppins text-base font-normal text-white hover:text-custom-green transition-colors w-full text-center py-2"
             >
               Docs
             </a>
             <a
               href="#faq"
-       font-normal        className="font-poppins text-base text-white hover:text-custom-green transition-colors w-full text-center py-2"
-              style={{ fontWeight: '400' }}
+              className="font-poppins text-base font-normal text-white hover:text-custom-green transition-colors w-full text-center py-2"
             >
               FAQ's
             </a>
