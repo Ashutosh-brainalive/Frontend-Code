@@ -1,7 +1,6 @@
 import React, { useState } from "react";
-import './App.css';
 import { Check } from 'lucide-react';
-import { tiers, nodePackages} from './constants/salesContent'
+import { tiers, nodePackages} from '../../constants/salesContent'
 
 
 
@@ -9,7 +8,7 @@ const SaleSection = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   return (
-    <div className="bg-black text-white py-8 sm:py-16 px-4 sm:px-8 lg:px-20 font-poppins">
+    <div id="sales" className="bg-black text-white py-8 sm:py-16 px-4 sm:px-8 lg:px-20 font-poppins">
 
       <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
         {["Tier 1 - Closed", "Tier 2 - Closed", "Tier 3 - Live"].map((tier, i) => (
@@ -27,7 +26,6 @@ const SaleSection = () => {
         <h2 className="text-[64px] font-normal font-poppins leading-[120%] tracking-[0%] text-center w-[1240px] h-[80px]" style={{
         background: 'linear-gradient(360deg, #FFFFFF 30%, rgba(255, 255, 255, 0.6) 100%)',
         WebkitBackgroundClip: 'text',
-        WebkitTextFillColor: 'transparent'
       }}>
         Public Sale – In Progress
       </h2>
@@ -51,7 +49,7 @@ const SaleSection = () => {
           </div>
 
           <div className="mt-4 w-full h-[8px] rounded-full bg-[#FFFFFF1A]">
-            <div className="h-full w-[50%] rounded-full bg-[#25B021]" />
+            <div className="h-full w-[35%] rounded-full bg-[#25B021]"/>
           </div>
         </div>
 
@@ -93,7 +91,6 @@ const SaleSection = () => {
                 <ul className="text-[#FFFFFF] text-[14px] font-poppins leading-tight tracking-normal font-normal text-center space-y-1">
                   {pkg.benefits.map((benefit, bIdx) => (
                     <li key={bIdx} className="flex justify-center items-center gap-1">
-                      <svg className="w-3 h-3 fill-[#25B021]" viewBox="0 0 24 24"><circle cx="12" cy="12" r="6" /></svg>
                       {benefit} 
                     </li>
                   ))}
@@ -123,13 +120,10 @@ const SaleSection = () => {
                   {tier.items}
                 </p>
               <div className={i === 3 ? 'blur-sm my-4' : 'my-4'}>
-                
                 <p className="text-[34px] font-medium font-poppins leading-[120%] tracking-[0%] text-white mb-1">
                   {tier.price}
                 </p>
-
                 <hr className="border-[#FFFFFF3D] mb-3 w-full" />
-
                 <p className="text-[16px] font-medium font-poppins leading-[120%] tracking-[0%] text-[#CFCFCF] w-[78px] h-[19px]">
                   {tier.apy}
                 </p>

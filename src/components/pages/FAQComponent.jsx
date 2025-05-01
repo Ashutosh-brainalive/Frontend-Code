@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import faqItems from './constants/faqContent';
+import faqItems from '../../constants/faqContent';
 
 
 const FAQComponent = () => {
@@ -14,13 +14,13 @@ const FAQComponent = () => {
   const rightItems = faqItems.filter((_, index) => index % 2 !== 0);
 
   return (
-    <div id="faq" className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 scroll-mt-24">
+    <div id='faq' className="w-full max-w-[1240px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16 scroll-mt-24">
       <h1 className="text-[32px] sm:text-[48px] lg:text-[64px] font-normal mb-6 sm:mb-8 lg:mb-12 text-white text-center font-poppins leading-tight">
         Frequently asked questions
       </h1>
       
       
-      <div className="block lg:hidden space-y-4">
+      <div className=" lg:hidden space-y-4">
         {faqItems.map((item, index) => (
           <FAQItem
             key={index}
@@ -33,7 +33,6 @@ const FAQComponent = () => {
 
       
       <div className="hidden lg:flex gap-6">
-        
         <div className="flex-1 space-y-4">
           {leftItems.map((item, index) => (
             <FAQItem
@@ -44,7 +43,6 @@ const FAQComponent = () => {
             />
           ))}
         </div>
-        
         
         <div className="flex-1 space-y-4">
           {rightItems.map((item, index) => (

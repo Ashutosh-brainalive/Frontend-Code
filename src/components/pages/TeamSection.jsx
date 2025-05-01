@@ -2,7 +2,7 @@ import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import teamMembers from "./constants/members";
+import teamMembers from "../../constants/members";
 
 
 const settings = {
@@ -42,13 +42,13 @@ const settings = {
 
 const TeamSection = () => {
   return (
-    <section className="w-full bg-black text-white py-12 overflow-hidden">
+    <section id="team" className="w-full bg-black text-white py-12 overflow-hidden">
       <h2
         className="text-center mb-12 text-[64px] font-normal leading-[120%] tracking-[0%] w-[316px] h-[77px] mx-auto bg-gradient-to-t from-white via-white/60 to-white/30 bg-clip-text text-transparent font-poppins"
       >
         The Team
       </h2>
-      <div className="px-6 w-[]">
+      <div className="px-6 ">
         <Slider {...settings}>
           {teamMembers.map((member, idx) => (
             <div key={idx} className="px-2">

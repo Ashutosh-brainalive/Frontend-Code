@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-
-const Navbarss = () => {
+import { Link } from 'react-router-dom';
+const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -31,16 +31,16 @@ const Navbarss = () => {
             Home
           </a>
           <a
-            href="/about"
+            href="#team"
             className="font-poppins text-base font-normal text-white "
           >
-            About
+            Team
           </a>
           <a
-            href="/docs"
+            href="#sales"
             className="font-poppins text-base font-normal text-white "
           >
-            Docs
+            Sale
           </a>
           <a
             href="#faq"
@@ -48,6 +48,13 @@ const Navbarss = () => {
           >
             FAQ's
           </a>
+
+          {/* <a
+            href="#apple"
+            className="font-poppins text-base font-normal text-white transition-colors"
+          >
+            apple
+          </a> */}
         </nav>
 
         
@@ -127,4 +134,4 @@ const Navbarss = () => {
   );
 };
 
-export default Navbarss;
+export default Navbar;

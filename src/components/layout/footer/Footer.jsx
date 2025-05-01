@@ -1,9 +1,9 @@
 import React from 'react';
-import { footerLinks,socialIcons } from './constants/footerContent';
+import { footerLinks,socialIcons } from '../../../constants/footerContent';
 
 export default function Footer() {
   return (
-    <footer className="bg-[rgba(208, 213, 221, 0.32)] w-full text-white py-10 px-5 sm:px-10 md:px-20 mt-[25px]">
+    <footer className="bg-[rgba(208, 213, 221, 0.32)] w-full text-white py-10 px-5 sm:px-10 md:px-20 mt-[25px] bg-black">
       <div className="max-w-[1440px] mx-auto flex flex-col md:flex-row justify-between gap-12">
 
         <div className="md:w-1/2 flex flex-col gap-6">

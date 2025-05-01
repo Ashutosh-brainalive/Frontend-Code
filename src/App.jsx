@@ -1,22 +1,17 @@
-import { useState } from 'react'
-import React from 'react'
-import './App.css'
-import Footer from './Footer'
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-import HeroSection from './HeroSection'
-import SaleSection from './Sales'
-import TeamSection from './TeamSection'
-import FAQComponent from './FAQComponent'
-function App() {
+import Feature from './features/index';
+import NotFound from './components/pages/NotFound';
+const App = () => {
   return (
-    <>
-    <HeroSection/>
-    <SaleSection/>
-    <FAQComponent/>
-    <TeamSection/>
-    <Footer/>
-    </>
-  )
-}
+    <Router>
+      <Routes>
+        <Route path="/" element={<Feature/>} />
+        <Route path='/*' element={<NotFound/>}/>
+      </Routes>
+    </Router>
+  );
+};
 
-export default App
+export default App;
