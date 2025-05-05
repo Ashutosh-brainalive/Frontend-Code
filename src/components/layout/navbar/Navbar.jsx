@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -120,7 +119,7 @@ const Navbar = () => {
               FAQ's
             </a>
             <div className="flex flex-col w-full gap-3 pt-4 border-t border-gray-800">
-              <button className="bg-custom-green text-white px-6 py-2.5 rounded-full font-semibold hover:bg-opacity-90 transition-colors w-full">
+              <button className="bg-[#25B021] text-white px-6 py-2.5 rounded-full font-semibold hover:bg-opacity-90 transition-colors w-full">
                 Buy Nodes
               </button>
               <button className="border border-white text-white px-6 py-2.5 rounded-full font-semibold hover:bg-white hover:text-black transition-colors w-full">

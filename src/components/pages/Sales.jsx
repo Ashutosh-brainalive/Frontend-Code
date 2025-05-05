@@ -10,27 +10,26 @@ const SaleSection = () => {
   return (
     <div id="sales" className="bg-black text-white py-8 sm:py-16 px-4 sm:px-8 lg:px-20 font-poppins">
 
-      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-8">
-        {["Tier 1 - Closed", "Tier 2 - Closed", "Tier 3 - Live"].map((tier, i) => (
-          <span
-            key={i}
-            className={`px-3 sm:px-4 py-1 rounded-full  text-xs sm:text-base ${
-              tier.includes("Live")
-                ? "border-[1px] border-solid border-[#25B021] text-white backdrop-blur-[24px] bg-gradient-to-r from-transparent via-[rgba(37,176,33,0)] to-[rgba(105,205,102,0.24)]"
-                : "bg-[#FFFFFF0F]  text-[rgba(255,255,255,0.3)] backdrop-blur-[24px] bg-gradient-to-r from-transparent via-[rgba(37,176,33,0)] to-[#2d2f2d3d]"
-            }`}
-          >
-            {tier}
-          </span>
-        ))}
-        <h2 className="text-[64px] font-normal font-poppins leading-[120%] tracking-[0%] text-center w-[1240px] h-[80px]" style={{
-        background: 'linear-gradient(360deg, #FFFFFF 30%, rgba(255, 255, 255, 0.6) 100%)',
-        WebkitBackgroundClip: 'text',
-      }}>
-        Public Sale – In Progress
-      </h2>
-      </div>
+      <div className="flex flex-col items-center mb-6 sm:mb-8 px-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-4">
+          {["Tier 1 - Closed", "Tier 2 - Closed", "Tier 3 - Live"].map((tier, i) => (
+            <span
+              key={i}
+              className={`px-3 sm:px-4 py-1 rounded-full text-xs sm:text-base ${
+                tier.includes("Live")
+                  ? "border border-[#25B021] text-white backdrop-blur-[24px] bg-gradient-to-r from-transparent via-[rgba(37,176,33,0)] to-[rgba(105,205,102,0.24)]"
+                  : "bg-[#FFFFFF0F] text-[rgba(255,255,255,0.3)] backdrop-blur-[24px] bg-gradient-to-r from-transparent via-[rgba(37,176,33,0)] to-[#2d2f2d3d]"
+              }`}
+            >
+              {tier}
+            </span>
+          ))}
+        </div>
 
+        <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-[64px] font-normal font-poppins leading-tight tracking-wide text-center max-w-[90%] sm:max-w-[600px] md:max-w-[900px]">
+          Public Sale – In Progress
+        </h2>
+      </div>
 
       <div
         className="rounded-[32px] max-w-[1240px] mx-auto p-4 sm:p-8 mb-6 sm:mb-10 overflow-x-hidden"
@@ -58,11 +57,9 @@ const SaleSection = () => {
             Get Started
           </button>
         </div>
-
         <p className="mt-6 w-full sm:w-[1176px] text-base sm:text-lg font-poppins font-normal leading-normal tracking-tight text-[#FFFFFF]">
           Special offers for you (Pick your choice):
         </p>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-[16px]">
         {nodePackages.map((pkg, idx) => {
           const selected = selectedIndex === idx;

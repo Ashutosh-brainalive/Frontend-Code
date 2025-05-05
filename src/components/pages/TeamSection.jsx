@@ -17,7 +17,7 @@ const settings = {
   centerPadding: "10%", // Adjust for half slide peek on left/right
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1024, 
       settings: {
         slidesToShow: 3,
         centerPadding: "8%",
